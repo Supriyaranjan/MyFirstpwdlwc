@@ -1,0 +1,30 @@
+{
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": false
+        },
+        {
+            "path": "CalculatorPackage",
+            "package": "CalculatorPackage",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": true
+        },
+        {
+            "path": "CustomPkg",
+            "package": "CustomPkg",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        }
+    ],
+    "name": "calculator",
+    "namespace": "",
+    "sfdcLoginUrl": "supran1017@resilient-shark-hxsts3.com",
+    "sourceApiVersion": "52.0",
+    "packageAliases": {
+        "CalculatorPackage": "0Ho5G0000004CKpSAM",
+        "CustomPkg": "0Ho5G0000004CKuSAM"
+    }
+}
