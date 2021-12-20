@@ -1,0 +1,19 @@
+<template>
+
+    <lightning-card  title="Hello">
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Account name"  maxlength="10" value={input} onchange={nameChange}></lightning-input>
+            
+            
+        </div>
+        <div class="slds-m-around_medium">
+        <lightning-button label="Get Accounts" onclick={getAccounts}></lightning-button>
+    </div>
+       
+        <template for:each={myAccounts} for:item="item" for:index="index">
+            <div key={item.Name}>Account: {item.Name} </div>
+        </template>
+    </lightning-card>
+    
+</template>

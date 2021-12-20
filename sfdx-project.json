@@ -25,6 +25,7 @@
     "sourceApiVersion": "52.0",
     "packageAliases": {
         "CalculatorPackage": "0Ho5G0000004CKpSAM",
-        "CustomPkg": "0Ho5G0000004CKuSAM"
+        "CustomPkg": "0Ho5G0000004CKuSAM",
+        "CalculatorPackage@0.1.0-1": "04t5G000004F4FJQA0"
     }
 }

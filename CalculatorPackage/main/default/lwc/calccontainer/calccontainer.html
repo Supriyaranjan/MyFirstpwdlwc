@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Calculator" icon-name="custom:custom14">
+    <c-calculator onaddhistory={handleAddHistory}></c-calculator>
+    </lightning-card>
+    <lightning-card title="Calculation History" icon-name="custom:custom14">
+    <template for:each={myOperationHistory} for:item="item" for:index="index">
+        <div key={item.name}>
+            <c-calchistory
+                operation={item.operation}
+                number1={item.number1}
+                number2={item.number2}
+                result={item.result}>
+            </c-calchistory>
+        </div>   
+    </template>
+    </lightning-card>
+    
+</template>

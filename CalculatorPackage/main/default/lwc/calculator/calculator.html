@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Number 1"  maxlength="10" value={number1} onchange={nameChange}></lightning-input>
+            <lightning-input type="text" label="Number 2"  maxlength="10" value={number2} onchange={nameChange}></lightning-input>
+            
+            <br><p><span class="slds-text-heading_small">Total is {total}</span></p>
+        </div>
+        
+    </div>
+
+    <div class="slds-grid slds-gutters">
+        <template for:each={myOperations} for:item="item" for:index="index">
+            <div class="slds-col" key={item.name} onbtnclicked={handlecalc}>
+                <c-calcbtn 
+                    data-index={index}
+                    btnname={item.name} 
+                    btntitle={item.title}>
+                </c-calcbtn>
+            </div>   
+        </template>
+    </div>
+</template>

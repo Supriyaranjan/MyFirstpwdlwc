@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  title="Hello">
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+
+        <template if:true={account.data}>
+            <div class="slds-m-around_medium">
+                <p>{name}</p>
+            </div>
+
+        </template>
+    </lightning-card>
+    
+</template>
