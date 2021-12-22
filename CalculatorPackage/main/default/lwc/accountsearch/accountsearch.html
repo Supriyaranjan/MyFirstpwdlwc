@@ -1,7 +1,6 @@
 <template>
 
-    <lightning-card  title="Hello">
-        <lightning-button label="New" slot="actions"></lightning-button>
+    <lightning-card  title="Account Search">
         <div class="slds-p-around_medium lgc-bg">
             <lightning-input type="text" label="Account name"  maxlength="10" value={input} onchange={nameChange}></lightning-input>
             
@@ -10,10 +9,29 @@
         <div class="slds-m-around_medium">
         <lightning-button label="Get Accounts" onclick={getAccounts}></lightning-button>
     </div>
-       
+    </lightning-card>
+    <lightning-card  title="Account List">
+    <div class="slds-grid slds-gutters">
         <template for:each={myAccounts} for:item="item" for:index="index">
-            <div key={item.Name}>Account: {item.Name} </div>
+            <div class="slds-col" key={item.Id} data-index={index} onclick={dispActDetails}>Account: {item.Name} </div>
+        </template>
+    </div>
+     </lightning-card>
+     <template if:true={addContactFlag}>
+     <lightning-card  title="Details">
+         <p>Account description: {acctName}</p>
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text" label="Contact Name"  maxlength="30" value={input} onchange={contactNameChange}></lightning-input>     
+            </div>
+            <div class="slds-m-around_medium">
+                <lightning-button label="Add Contact" onclick={handleAddContact}></lightning-button>
+                </div>
+    </lightning-card>
+    <lightning-card  title="ContactList">   
+        <template for:each={myContacts} for:item="item" for:index="index">
+            <div key={item.Name}>Contact: {item.Name}  Email: {item.Email}</div>
         </template>
     </lightning-card>
+    </template>
     
 </template>
